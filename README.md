@@ -133,35 +133,49 @@ Corrective-RAG/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-Docker
 
-The project can be built and executed using Docker.
+## Experimental Results
 
-docker build -t corrective-rag .
-docker run --rm --env-file .env corrective-rag
+The system was evaluated by comparing Naive RAG with Corrective RAG on the same set of test queries.
 
-API keys are supplied through environment variables and are not included in the repository.
+### Results
 
-Conclusion
+| Metric | Naive RAG | Corrective RAG |
+|---|---:|---:|
+| Average Latency | 6.95 s | 11.61 s |
+| Routing Accuracy | — | 100.00% |
 
-The experiment demonstrates that adding a relevance-evaluation and routing stage can enable a RAG system to distinguish between locally answerable questions and questions requiring external retrieval.
+### Observations
 
-However, the additional grading step increases latency. Therefore, CRAG provides a reliability-oriented routing mechanism at the cost of additional computation and response time.
+- Naive RAG had lower average latency at 6.95 seconds.
+- Corrective RAG had higher average latency at 11.61 seconds because it performs an additional document relevance-grading step.
+- Corrective RAG achieved 100% routing accuracy on the evaluated test queries.
+- The experiment therefore shows a trade-off between additional processing time and improved retrieval-source routing for the tested queries.
 
-Future Improvements
-Larger evaluation dataset
-More robust answer-quality metrics
-Query rewriting
-Sentence-level context filtering
-Confidence-based routing
-Vector databases such as Qdrant or pgvector
-More extensive latency and cost analysis
+> These results are specific to the experimental dataset and test queries used in this project and should not be interpreted as universal performance guarantees.
 
-### ⚠️ One important thing
+## Research Conclusion
 
-Those **6.95 s / 11.61 s / 100%** numbers are YOUR actual experiment results from the run you just showed me, so we're good to document them.
+The experiment indicates that evaluating retrieved documents before generation can improve routing reliability in the tested CRAG system. However, this additional evaluation introduces latency compared with standard Naive RAG.
 
-Also, don't worry about the Google Gemini warning:
+Therefore, for the tested queries, Corrective RAG provides more controlled retrieval routing at the cost of additional processing time.
 
-```text
-Direct use of automatic function calling (AFC)...
+## Limitations
+
+- The evaluation uses a small curated knowledge base.
+- The number of test queries is limited.
+- Latency depends on API response times and network conditions.
+- The experiment does not establish that CRAG is universally more accurate than Naive RAG.
+- Web-search results can change over time.
+
+## Future Work
+
+Future improvements could include:
+
+- Larger and more diverse evaluation datasets.
+- Query rewriting before retrieval.
+- Sentence-level relevance filtering.
+- Confidence-based routing.
+- Evaluation with larger vector databases such as Qdrant or pgvector.
+- More systematic evaluation of hallucination and factual support.
+- Deployment as a containerized API service.
