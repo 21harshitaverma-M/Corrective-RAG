@@ -1,0 +1,11 @@
+id,question,expected_source,naive_time,crag_time,crag_source,naive_answer,crag_answer
+1,What is supervised learning?,local,8.14,19.13,local,"Based on the provided context, supervised learning is a branch of machine learning that uses labeled training data. Common tasks associated with it include classification and regression.","Supervised learning uses labeled training data, and common tasks associated with it include classification and regression."
+2,What is natural language processing?,local,3.85,5.57,local,"Based on the provided context, Natural Language Processing (NLP) is a field of artificial intelligence concerned with processing and understanding human language.",Natural Language Processing (NLP) is a field of artificial intelligence concerned with processing and understanding human language.
+3,What is a relational database?,local,3.55,5.46,local,"Based on the provided context, a relational database is a database that organizes information into tables and commonly uses SQL for querying.","Based on the provided context, a relational database organizes information into tables and commonly uses SQL for querying."
+4,What is Nvidia's current market capitalization?,web,3.56,11.1,web,The available context is insufficient to answer the question about Nvidia's current market capitalization.,"Based on the provided context, Nvidia's market capitalization is listed with multiple figures depending on the specific date and section:
+
+* As of Sep 10, 2026, it is reported as **$5.27T**.
+* Another section notes Nvidia's market cap as **$5440.09B** (or $5440.093B) as of September 08, 2026.
+* The Stock Snapshot section lists the market capitalization as **$4.98T**."
+5,What is the current price of Bitcoin?,web,12.68,13.52,web,The available context is insufficient to answer the question about the current price of Bitcoin.,"Based on the provided context, the current price of Bitcoin is listed variously as $78.1K, $78,065.09 USD, and $77,233.70 USD."
+6,Who is the current president of the United States?,web,9.89,14.89,web,The available context is insufficient to answer the question of who the current president of the United States is.,"Based on the provided context, the current president of the United States is Donald John Trump (also referred to as Donald Trump)."

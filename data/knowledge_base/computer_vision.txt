@@ -1,0 +1,7 @@
+Computer vision is an area of artificial intelligence concerned with
+enabling computers to interpret visual information.
+
+Common computer vision tasks include image classification, object
+detection, image segmentation, and image recognition.
+
+Modern computer vision systems frequently use deep neural networks.

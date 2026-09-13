@@ -1,0 +1,7 @@
+A database is an organized collection of data that can be stored,
+managed, and retrieved efficiently.
+
+Relational databases organize information into tables and commonly use
+SQL for querying.
+
+A primary key uniquely identifies a record in a relational database.

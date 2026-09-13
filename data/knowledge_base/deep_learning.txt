@@ -1,0 +1,8 @@
+Deep learning is a subset of machine learning based on artificial neural
+networks with multiple layers.
+
+Deep learning models can automatically learn hierarchical representations
+from large amounts of data.
+
+Convolutional neural networks are commonly used for image-related tasks,
+while transformer architectures are widely used for language tasks.
